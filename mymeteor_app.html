@@ -1,13 +1,15 @@
 <head>
-  <title>Todo List</title>
+  <title>Tasks List</title>
 </head>
 
 <body>
   <div class="container">
     <header>
-      <h1>Todo List</h1>
+      <h1>Tasks List</h1>
       <form class="new-task">
         <input type="text" name="text" placeholder="Type to add new tasks" />
+        <textarea name="comment" rows="2" cols="71" placeholder="Add comment here..." ></textarea>
+        <button type="submit">submit</button>
       </form>
     </header>
 
@@ -17,12 +19,16 @@
       {{/each}}
     </ul>
   </div>
+  <div id="footer">
+    Number of deleted tasks: {{counter}}
+  </div>
 </body>
+
 
 <template name="task">
   <li class="{{#if checked}}checked{{/if}}">
      <button class="delete">&times;</button>
      <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
-     <span class="text">{{text}}</span>
+     <span class="text"><strong>{{text}}</strong> | comment: {{comment}}</span>
    </li>
 </template>
