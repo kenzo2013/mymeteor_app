@@ -40,6 +40,7 @@ footer {
   line-height: 3.1em;
   height: 5%;
   margin-top: 44px;
+  position: relative;
 }
 #login-buttons {
   display: block;
